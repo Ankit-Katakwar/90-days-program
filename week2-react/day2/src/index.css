@@ -1,28 +1,49 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #f5f5f5;
-    background-color: #111;
-}
-html, body{
-    height: 100%;
-    color: #fff;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
 }
 
-.navbar{
-    background-color: lightskyblue;
-    padding: 10px;
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #111;
+}
+
+.cardParent {
+    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px ;
+  background-color: #222;
+}
+
+.card button {
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+}
+.card p{
     margin: 10px ;
-
 }
-.card{
-    background-color: pink;
-    padding: 80px;
-    margin: 50px ;
 
+.card img {
+    width : 100px ;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
 }

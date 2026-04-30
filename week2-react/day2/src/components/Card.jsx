@@ -1,14 +1,25 @@
-import React from 'react'
+import React from "react";
 
-const Card = () => {
+const Card = (props) => {
   return (
-    <div className='card'> 
+    
+      
+      <div className="card">
+        <img
+          src={props.img}
+          alt=""
+        />
 
-        <h1>This is my card </h1>
-        <h3>My Name is Ankit Katakwar and I am 24 years old. Thank you. </h3>
+        <h2>
+          {props.name},{props.age}
+        </h2>
+        <p>{props.profession}</p>
+        <p>{props.country}</p>
+        <button> View Profile </button>
+      </div>
+      
+    
+  );
+};
 
-    </div>
-  )
-}
-
-export default Card
+export default Card;
