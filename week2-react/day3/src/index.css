@@ -12,12 +12,14 @@ body {
   background-color: #111;
 }
 .parent {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #333;
   padding: 30px;
   display: flex;
   gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .cards {
   height: 400px;

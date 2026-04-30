@@ -1,12 +1,12 @@
 import React from "react";
 import { Bookmark } from "lucide-react";
 
-const Card = () => {
+const Card = (elem) => {
   return (
     <div className="cards">
       <div className="top">
         <img
-          src="https://1000logos.net/wp-content/uploads/2016/10/Amazon-logo-meaning.jpg"
+          src={elem.logo}
           alt=""
         />
         <button>
@@ -15,19 +15,19 @@ const Card = () => {
       </div>
       <div className="center">
         <h3>
-          Amazon <span className="centerSpan">5 days ago</span>
+         {elem.company} <span className="centerSpan">{elem.posted}</span>
         </h3>
-        <h2>Senior UI/UX Designer</h2>
+        <h2>{elem.designation}</h2>
 
         <div>
-          <h4>Part Time</h4>
-          <h4>Senior Level</h4>
+          <h4>{elem.tag1}</h4>
+          <h4>{elem.tag2} </h4>
         </div>
       </div>
       <div className="bottom">
         <div>
-          <h3>$140/hr</h3>
-          <p>Mumbai,India</p>
+          <h3>{elem.salary}</h3>
+          <p>{elem.location} </p>
         </div>
         <button>Apply</button>
       </div>
