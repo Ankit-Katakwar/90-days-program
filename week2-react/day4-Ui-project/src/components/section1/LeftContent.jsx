@@ -15,7 +15,7 @@ const LeftContent = () => {
           quibusdam.
         </p>
       </div>
-      <div className="text-7xl"><i class="ri-arrow-right-up-line"></i></div>
+      <div className="text-7xl"><i className="ri-arrow-right-up-line"></i></div>
     </div>
   );
 };
