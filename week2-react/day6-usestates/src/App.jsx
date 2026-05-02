@@ -18,7 +18,7 @@ const App = () => {
   };
 
   const properList = tasklist.map((task, i) => {
-    return `${i + 1},The task is ${task}`;
+    return `${i + 1},The tasks are ${task}`;
   });
 
   return (
