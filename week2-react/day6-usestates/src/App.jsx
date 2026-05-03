@@ -3,37 +3,41 @@ import React, { useState } from "react";
 const App = () => {
   const [text, setText] = useState("");
 
-  const [tasklist, setTasklist] = useState([
-    "bathing ",
-    "clothing ",
-    "washing ",
-  ]);
-  const value = (e) => {
+  const [list, setlist] = useState([]);
+
+  const getValue = (e) => {
     setText(e.target.value);
   };
-  const addTask = (taskName) => {
-    setTasklist([...tasklist, text]);
-    setText("")
-    
+
+  const addTask = (text) => {
+    setlist([...list, text]);
+    setText("");
   };
 
-  const properList = tasklist.map((task, i) => {
-    return `${i + 1},The tasks are ${task}`;
+  const properList = list.map((task, i) => {
+    return ` ${i + 1}: ${task} ,`;
   });
 
   return (
     <div>
-      <h3>{text}</h3>
       <input
-        id="input"
-        onChange={value}
-        value={text}
         type="text"
-        placeholder="Enter the task"
+        value={text}
+        onChange={getValue}
+        placeholder="Enter your task"
       />
-      <button onClick={addTask}>Add Task</button>
-
-      <h4>{properList}</h4>
+      <button
+        onClick={() => {
+          addTask(text);
+        }}
+      >
+        Add Task
+      </button>
+      <h3>
+        {list.map((task, i) => {
+          return  <h3 key={i}>{i+1}. {task}</h3>;
+        })}
+      </h3>
     </div>
   );
 };
