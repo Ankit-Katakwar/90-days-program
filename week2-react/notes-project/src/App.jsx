@@ -10,16 +10,18 @@ const App = () => {
     e.preventDefault();
 
     if (title.length <= 15 && details.length <= 70) {
-      setTask([...task,{title,details}]);
+      setTask([...task, { title, details }]);
       setTitle("");
       setDetails("");
-      console.log(task);
     } else {
       alert("Total words exceeded.  ");
     }
   };
 
-  
+  const deleteNote = (idx) => {
+    const deleted = task.filter((_, i) => i !== idx);
+    setTask(deleted);
+  };
 
   return (
     <div className=" h-screen lg:flex">
@@ -63,7 +65,13 @@ const App = () => {
         >
           {task.map((props, idx) => {
             return (
-              <Card key={idx} delete={deleteNote} idx={idx} title={props.title} details={props.details} />
+              <Card
+                key={idx}
+                delete={deleteNote}
+                idx={idx}
+                title={props.title}
+                details={props.details}
+              />
             );
           })}
         </div>
