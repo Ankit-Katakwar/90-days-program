@@ -19,6 +19,8 @@ const App = () => {
     }
   };
 
+  
+
   return (
     <div className=" h-screen lg:flex">
       <form className="lg:w-1/2  h-full p-10 flex flex-col gap-3">
@@ -61,7 +63,7 @@ const App = () => {
         >
           {task.map((props, idx) => {
             return (
-              <Card key={idx} idx={idx} title={props.title} details={props.details} />
+              <Card key={idx} delete={deleteNote} idx={idx} title={props.title} details={props.details} />
             );
           })}
         </div>
