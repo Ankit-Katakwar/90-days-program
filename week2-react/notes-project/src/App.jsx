@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./Components/Card";
 
 const App = () => {
+  const [title, setTitle] = useState("");
+  const [details, setDetails] = useState("");
+  const [task, setTask] = useState([]);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    if (title.length <= 15 && details.length <= 70) {
+      setTask([...task,{title,details}]);
+      setTitle("");
+      setDetails("");
+      console.log(task);
+    } else {
+      alert("Total words exceeded.  ");
+    }
+  };
+
   return (
     <div className=" h-screen lg:flex">
       <form className="lg:w-1/2  h-full p-10 flex flex-col gap-3">
@@ -9,18 +26,28 @@ const App = () => {
           Notes
         </h1>
         <input
+          onChange={(e) => {
+            setTitle(e.target.value);
+          }}
+          value={title}
           className="w-full border-black border-2 h-15 text-center text-xl font-bold
          "
           type="text"
           placeholder="Enter you title"
         />
         <textarea
-          name=""
+          onChange={(e) => {
+            setDetails(e.target.value);
+          }}
+          value={details}
           className="w-full px-5 py-1 border-black border-2 h-15 font-semibold"
-          placeholder="Enter details...."
+          placeholder="Enter details here...."
           id=""
         ></textarea>
-        <button className="border-2 border-black font-bold h-10 ">
+        <button
+          onClick={onSubmit}
+          className="border-2 border-black font-bold h-10 active:scale-90 hover:bg-gray-300 "
+        >
           Confirm
         </button>
       </form>
@@ -32,13 +59,11 @@ const App = () => {
           name="container"
           className="h-full lg:w-[90%]  lg:p-5 flex flex-wrap justify-center gap-4 overflow-x-auto"
         >
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {task.map((props, idx) => {
+            return (
+              <Card key={idx} idx={idx} title={props.title} details={props.details} />
+            );
+          })}
         </div>
       </div>
     </div>
