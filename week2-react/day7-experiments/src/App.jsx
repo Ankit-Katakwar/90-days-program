@@ -1,18 +1,18 @@
-import React from "react";
+import React, { use } from 'react'
 
 const App = () => {
+  const users = [
+ {name:"Ankit", age:23},
+ {name:"Rahul", age:15},
+ {name:"Aman", age:30}
+]
+
+const adults = users.filter((props)=>props.age>=18)
   return (
-   <div className="flex flex-wrap content-start h-screen bg-pink-100 p-4 gap-4">
+    <div>{adults.map((user)=>{
+      return  `My name is ${user.name} and my age is ${user.age} and yes I am a adult.`
+    })}</div>
+  )
+}
 
-  <div className="bg-red-400 w-32 h-20">1</div>
-  <div className="bg-green-400 w-32 h-20">2</div>
-  <div className="bg-blue-400 w-32 h-20">3</div>
-  <div className="bg-yellow-400 w-32 h-20">4</div>
-  <div className="bg-purple-400 w-32 h-20">5</div>
-  <div className="bg-indigo-400 w-32 h-20">6</div>
-
-</div>
-  );
-};
-
-export default App;
+export default App
