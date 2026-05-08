@@ -40,7 +40,7 @@ const App = () => {
               setUserData([]);
             pageIdx > 1 ? setPageIdx(pageIdx - 1) : setPageIdx(1)}
           }
-          className="  bg-amber-500 px-4 py-2  text-black rounded  active:scale-90"
+          className="  bg-amber-500 px-4 py-2  text-black rounded  active:scale-95"
         >
           Prev
         </button>
@@ -50,7 +50,7 @@ const App = () => {
             setUserData([]);
             setPageIdx(pageIdx + 1);
           }}
-          className="  bg-amber-500 px-4 py-2  text-black rounded active:scale-90"
+          className="  bg-amber-500 px-4 py-2  text-black rounded active:scale-95"
         >
           Next
         </button>
