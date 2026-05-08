@@ -36,10 +36,16 @@ const App = () => {
       </div>
       <div className="flex justify-center p-4 w-full ">
         <button
-          onClick={() =>{
-              setUserData([]);
-            pageIdx > 1 ? setPageIdx(pageIdx - 1) : setPageIdx(1)}
-          }
+          style={{ opacity: pageIdx == 1 ? 0.5 : 1 }}
+          onClick={() => {
+
+            if(pageIdx>1){
+                setPageIdx(pageIdx - 1)
+                setUserData([])
+            }
+          
+           
+          }}
           className="  bg-amber-500 px-4 py-2  text-black rounded  active:scale-95"
         >
           Prev
