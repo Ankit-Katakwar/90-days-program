@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Navbar2 = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex px-7 py-3 bg-red-300 justify-center gap-10">
+    <div className="flex px-7 py-3 bg-red-400 justify-center gap-10">
       <button
         onClick={() => {
           navigate(-1);
