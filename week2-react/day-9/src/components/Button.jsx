@@ -5,7 +5,11 @@ const Button = () => {
     const [theam, setTheam] = useContext(TheamData)
 
     const changeTheam = ()=>{
-    setTheam("Dark")
+    if(theam === "light"){
+        setTheam("Dark")
+    }else{
+        setTheam("light")
+    }
     }
 
   return (
