@@ -6,9 +6,9 @@ const Button = () => {
 
     const changeTheam = ()=>{
     if(theam === "light"){
-        setTheam("Dark")
+        setTheam("Darks")
     }else{
-        setTheam("light")
+        setTheam("lights")
     }
     }
 
