@@ -34,7 +34,7 @@ routes.post("/posts", async (req,res)=>{
 
 
     res.json({
-        message:"post created"
+        message:"post created."
         
     
     })
