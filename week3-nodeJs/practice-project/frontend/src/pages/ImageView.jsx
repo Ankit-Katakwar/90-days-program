@@ -11,7 +11,6 @@ const ImageView = () => {
     },
   ]);
 
-
   async function getImages() {
     const result = await axios
       .get("http://localhost:3000/viewImages")
@@ -27,17 +26,18 @@ const ImageView = () => {
   }, []);
   console.log(images);
 
-
   return (
     <div className="bg-gray-400">
-      { images.length > 0 ? (
-        images.map((image) => (<div key={image._id}>
+      {images.length > 0 ? (
+        images.map((image) => (
+          <div key={image._id}>
             <img src={image.image} alt="picture" />
             <h3>{image.caption}</h3>
-          </div>))
-      ) : 
+          </div>
+        ))
+      ) : (
         <h3> There is no data available right now.</h3>
-      }
+      )}
     </div>
   );
 };
