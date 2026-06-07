@@ -175,9 +175,75 @@
 # a = {1,2,3,4,5,6}
 # b = {4,5,6,7,8,9}
 
+####a[1] = 76
+
 # a-=b
 # b-=b
 
 
 # print(a)
 # print(b)
+
+
+
+
+
+
+# user = {
+#     "name":"Ankit katakwar",
+#     "age" :24 ,
+#     "status":"Not married",
+#     "address":{
+#         "city":"Bhopal",
+#         "Pincode":461775
+#     }
+# }
+
+# for key , value in user.items():
+#     print(key,":",value)
+
+
+# for i in d2:
+#     d[i] = d2[i]
+
+# print(d[1])
+# print(d2)
+
+
+# d = {1:100,2:200,3:300,} 
+# sum= 0
+# for key,value in d.items():
+#     sum = sum+ value
+# print(sum)
+
+
+# sum=0
+# for i in d:
+#     sum = sum + d[i]
+    
+# print(sum)
+
+# l = [1,1,1,2,2,2,3,3,4,4,4,5,6,6,7,8,,88,9,8,7,6,5,4,3,212,212,1,3,5,65,76,78,8]
+# d={}
+# for i in l:
+#     if i in d.keys():
+#         d[i] += 1
+#     else:
+#         d[i] = 1
+# print(d)
+
+d1 = {1:100,2:200,3:300,} 
+d2 = {3:200,4:400}
+
+
+for i in d2:
+    if i in d1.keys():
+        d1[i] = d1[i] + d2[i]
+        
+    else:
+        d1[i] = d2[i]
+        
+        
+        
+        
+print(d1)
