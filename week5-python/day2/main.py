@@ -251,14 +251,25 @@
 
 
 
-n = int(input("Enter your number -:  "))
-try:
-    if n == 5:
-        raise ValueError("5 se nafrat h bhai muje.")
-    else:
-        print("all good ji")
-except Exception as err:
-    print(f"Print occure as err {err}")
+# n = int(input("Enter your number -:  "))
+# try:
+#     if n == 5:
+#         raise ValueError("5 se nafrat h bhai muje.")
+#     else:
+#         print("all good ji")
+# except Exception as err:
+#     print(f"Print occure as err {err}")
     
     
-print("Ho gaya")
+# print("Ho gaya")
+
+
+# file handling now. 
+
+
+# js = open("app.jsxx","x")
+
+# js.write("const express = express.js")
+
+
+
