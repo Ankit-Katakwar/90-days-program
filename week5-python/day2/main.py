@@ -232,18 +232,33 @@
 #         d[i] = 1
 # print(d)
 
-d1 = {1:100,2:200,3:300,} 
-d2 = {3:200,4:400}
+# d1 = {1:100,2:200,3:300,} 
+# d2 = {3:200,4:400}
 
 
-for i in d2:
-    if i in d1.keys():
-        d1[i] = d1[i] + d2[i]
+# for i in d2:
+#     if i in d1.keys():
+#         d1[i] = d1[i] + d2[i]
         
+#     else:
+#         d1[i] = d2[i]
+        
+        
+        
+        
+# print(d1)
+
+
+
+
+n = int(input("Enter your number -:  "))
+try:
+    if n == 5:
+        raise ValueError("5 se nafrat h bhai muje.")
     else:
-        d1[i] = d2[i]
-        
-        
-        
-        
-print(d1)
+        print("all good ji")
+except Exception as err:
+    print(f"Print occure as err {err}")
+    
+    
+print("Ho gaya")
