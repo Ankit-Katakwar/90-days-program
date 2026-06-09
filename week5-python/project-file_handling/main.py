@@ -95,7 +95,7 @@ def deletefile():
             # os.remove(name)
             print("File has been deleted successfully.")
         else:
-            print("This file does not exists.")
+            print("This file do not exists.")
     
     except Exception as err:
         print(f"There is an err as {err}")
