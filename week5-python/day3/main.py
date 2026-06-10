@@ -106,20 +106,42 @@
 # print(obj2)
 
     
-def wrapped(func):
-    def wrapper(a,b):
-        print("The sum of all the numbers is given below-")
-        func(a,b)
-        print("Thank you very much for using our function.")
-    return wrapper
+# def wrapped(func):
+#     def wrapper(*args):
+#         print("The sum of all the numbers is given below-")
+#         func(*args)
+#         print("Thank you very much for using our function.")
+#     return wrapper
 
 
 
-@wrapped
-def add(a,b):
-    print(a+b)
+# @wrapped
+# def add(*args):
     
-add(8,9)
-add(823,932)
-add(3258,935)
-add(6488,932)
+#     sum = 0
+#     for i in args:
+#         sum += i     
+#     print(sum)
+# add(8,9,43,346,10)
+
+
+# def addition(*args):
+#     sum = 0
+#     for i in args:
+#         sum = sum + i
+#     print(sum)
+    
+# addition(12,34,2412,231)
+
+
+# def information(**krags):
+#    print("Please enter your informations:-\n ") 
+#    for i in krags:
+#         print(f"{i}:{krags[i]}")
+   
+    
+    
+# information(name = "Ankit katakwar",age = 24, location = "Bhopal" , business = "Coal Trading")
+    
+    
+    
