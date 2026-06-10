@@ -76,29 +76,50 @@
         
 
 
-class Human :
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
+# class Human :
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+    
+#     def __str__(self):
+#         return "This is a object bhai "
         
     
-    def __add__(self,other):
-        sum = 0 
-        for i in other:
-            sum = sum = other.age
-        return f"The age of both the humans are {self.age + sum}"    
+#     def __add__(self,other):
+#         sum = 0 
+#         for i in other:
+#             sum = sum = other.age
+#         return f"The age of both the humans are {self.age + sum}"    
     
 
 
-obj1=Human("Ankit",23)
-obj2=Human("Savvy",24)
-obj3=Human("Saevvy",2)
-obj4=Human("Sravvy",4)
-obj5=Human("Savvey",254)
-obj6=Human("Sagvvy",294)
+# obj1=Human("Ankit",23)
+# obj2=Human("Savvy",24)
+# obj3=Human("Saevvy",2)
+# obj4=Human("Sravvy",4)
+# obj5=Human("Savvey",254)
+# obj6=Human("Sagvvy",294)
 
-print(obj1.age + obj2.age+ obj3.age+ obj4.age+obj5.age+obj6.age)
+# print(obj1.age + obj2.age+ obj3.age+ obj4.age+obj5.age+obj6.age)
+# print(obj1)
+# print(obj3)
+# print(obj2)
 
     
+def wrapped(func):
+    def wrapper(a,b):
+        print("The sum of all the numbers is given below-")
+        func(a,b)
+        print("Thank you very much for using our function.")
+    return wrapper
 
+
+
+@wrapped
+def add(a,b):
+    print(a+b)
     
+add(8,9)
+add(823,932)
+add(3258,935)
+add(6488,932)
