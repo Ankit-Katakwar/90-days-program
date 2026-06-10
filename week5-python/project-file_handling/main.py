@@ -1,6 +1,8 @@
 
 from pathlib import Path
 import os
+import send2trash 
+
 def viewAllFiles():
     path = Path(r"")
     items = list(path.rglob('*'))
@@ -91,9 +93,17 @@ def deletefile():
         name = input("Please enter the name of the file you want to delete.")
         p = Path(name)
         if p.exists() and p.is_file():
-            p.unlink()
-            # os.remove(name)
-            print("File has been deleted successfully.")
+            print("Press 1 to send file in the recycle bin.")
+            print("Press 2 to delete the file Permanently.")
+            res = int(input("Please select the option:- "))
+            if res == 2:
+                p.unlink()
+                # os.remove(name)
+                print("File has been permanently deleted successfully.")
+            if res == 1:
+                send2trash.send2trash(name)
+                print("File is sent to recycle bin successfully.")
+                
         else:
             print("This file do not exists.")
     
@@ -113,9 +123,11 @@ num = int(input("Please enter a preferd number :- "))
 
 if num == 1:
     createfile()
-if num == 2:
+elif num == 2:
     readfile()
-if num == 3:
+elif num == 3:
     updatefile()
-if num == 4:
+elif num == 4:
     deletefile()
+else:
+    print("Please enter number from the given list only.")
