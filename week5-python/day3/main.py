@@ -66,7 +66,8 @@ class ChildFactory(ParentFactory):
     def show(self):
         print(f"I want {self.material} and {self.tyres}")
 
-lamborgini = ChildFactory("Carbon Fiber",2,4)
+lamborgini = ChildFactory("Carbon Fibers",2,4)
+toyota = ChildFactory("Carbon Fibers",4,4)
 lamboFactory = GrandFactory("Iron")
 
 print(lamborgini.material)
