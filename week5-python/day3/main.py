@@ -47,30 +47,58 @@
 # child1.show()
 
 
-class GrandFactory:
-    def __init__(self,material):
-        self.material = material
-    def show(self):
-        print(f"I want {self.material}.")
+# class GrandFactory:
+#     def __init__(self,material):
+#         self.material = material
+#     def show(self):
+#         print(f"I want {self.material}.")
 
-class ParentFactory(GrandFactory):
-    def __init__(self, material,glasses):
-        super().__init__(material)
-        self.glasses = glasses
+# class ParentFactory(GrandFactory):
+#     def __init__(self, material,glasses):
+#         super().__init__(material)
+#         self.glasses = glasses
 
 
-class ChildFactory(ParentFactory):
-    def __init__(self,material,glasses,tyres):
-        super().__init__(material,glasses)
-        self.tyres = tyres
-    def show(self):
-        print(f"I want {self.material} and {self.tyres}")
+# class ChildFactory(ParentFactory):
+#     def __init__(self,material,glasses,tyres):
+#         super().__init__(material,glasses)
+#         self.tyres = tyres
+#     def show(self):
+#         print(f"I want {self.material} and {self.tyres}")
 
-lamborgini = ChildFactory("Carbon Fibers",2,4)
-toyota = ChildFactory("Carbon Fibers",4,4)
-lamboFactory = GrandFactory("Iron")
+# lamborgini = ChildFactory("Carbon Fibers",2,4)
+# toyota = ChildFactory("Carbon Fibers",4,4)
+# lamboFactory = GrandFactory("Iron")
 
-print(lamborgini.material)
-lamborgini.show()
-lamboFactory.show()
+# print(lamborgini.material)
+# lamborgini.show()
+# lamboFactory.show()
         
+
+
+class Human :
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+        
+    
+    def __add__(self,other):
+        sum = 0 
+        for i in other:
+            sum = sum = other.age
+        return f"The age of both the humans are {self.age + sum}"    
+    
+
+
+obj1=Human("Ankit",23)
+obj2=Human("Savvy",24)
+obj3=Human("Saevvy",2)
+obj4=Human("Sravvy",4)
+obj5=Human("Savvey",254)
+obj6=Human("Sagvvy",294)
+
+print(obj1.age + obj2.age+ obj3.age+ obj4.age+obj5.age+obj6.age)
+
+    
+
+    
