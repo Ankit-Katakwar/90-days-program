@@ -145,3 +145,36 @@
     
     
     
+
+
+
+# for i in range(1,21):
+#     print("even") if i % 2 == 0 else print("odd")
+
+# l = [i for i in range(1,21) if i%2 == 0 ]
+# print(l)
+
+
+# l = { i : i**3 for i in range(1,21)}
+# print(l)
+
+
+
+# multiply = lambda a : "Wow my number" if a == 15 else "ghatiya number"
+
+# print(multiply(15))
+
+
+def double(x):
+    double =   x * 2 
+    return double
+   
+   
+        
+    
+    
+a = [ 1,2,3,4,5,6]
+
+result = map(double,a)
+
+print(list(result))
