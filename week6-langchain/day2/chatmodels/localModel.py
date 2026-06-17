@@ -21,7 +21,7 @@ model = ChatHuggingFace(llm=llm)
 
 print("\n🚀 Model loaded locally! Querying your local processor...")
 # 3. Invoke the model exactly like you requested
-question = input("Ask me anything relaed to the computer.")
+question = input("Ask me anything related to the computer.")
 result = model.invoke(question)
 
 print("\n--- Local AI Response ---")
