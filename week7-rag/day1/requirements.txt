@@ -53,3 +53,18 @@ torch
 
 # Logging & Utilities
 tqdm
+
+# Official Hugging Face Integration for LangChain
+langchain-huggingface
+
+# Hugging Face Model Ecosystem Utilities
+huggingface-hub
+transformers
+accelerate
+
+# Optional: Faster vector lookup if you run out of memory on Chroma
+faiss-cpu
+
+# Official Chroma Integration for LangChain
+langchain-chroma
+
