@@ -30,7 +30,7 @@ RAG applications and AI assistants.
     Document(
         page_content="""
 ChromaDB is a vector database used for storing and retrieving embeddings.
-It allows developers to perform similarity searches on text, images, and other data.
+It allows developers to perform similarity searches on texts, images, and other data.
 ChromaDB integrates well with LangChain and is often used in Retrieval-Augmented
 Generation systems.
 """,
