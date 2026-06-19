@@ -1,11 +1,10 @@
-from langchain_huggingface.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
+from langchain_community.vectorstores import Chroma
+from langchain_huggingface import HuggingFaceEmbeddings
 from dotenv import load_dotenv
 load_dotenv()
-embedding_model = HuggingFaceEmbeddings(
-    model = "BAAI/bge-small-en-v1.5"
-)
+
+
 
 docs = [
     Document(
@@ -60,14 +59,28 @@ and PyTorch.
     )
 ]
 
-vectore_store = Chroma.from_documents(
-    documents= docs,
-    embedding=embedding_model,
-    persist_directory="chroma-db"
+
+
+embedding_model = HuggingFaceEmbeddings(
+   model = "BAAI/bge-small-en-v1.5"
 )
 
-retirval = vectore_store.similarity_search("Whats the most famous place to visit in India.",k=1)
+vectorstore = Chroma.from_documents(
+    documents=docs,
+    embedding= embedding_model,
+    persist_directory= "my_chroma-db"
+    )
 
-for i in retirval:
+result = vectorstore.similarity_search("I wanna know anything about computer",k=2)
+for r in result:
+    print(r.page_content)
+    print(r.metadata)
+    print("----------------------------------------")
+
+
+retirvals = vectorstore.as_retriever(search_kwargs={"k": 2})
+
+docs = retirvals.invoke("2 things related to computer.")
+
+for i in docs:
     print(i.page_content)
-    print(i.metadata)
