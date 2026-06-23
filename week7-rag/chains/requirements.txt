@@ -1,0 +1,12 @@
+python-dotenv
+langchain
+langchain-core
+langchain_mistralai
+langchain-huggingface
+mistralai
+langchain-huggingface
+
+# Hugging Face Model Ecosystem Utilities
+huggingface-hub
+transformers
+accelerate
