@@ -11,7 +11,7 @@ llm = ChatMistralAI(
 )
 @tool
 def text_length(text= str ) -> int:
-    """This tool will retun the number of character in the text"""
+    """This tool will retun the number of character in the text."""
     return len(text)
 
 tools = {
