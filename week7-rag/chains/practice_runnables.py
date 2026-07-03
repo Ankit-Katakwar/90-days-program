@@ -11,10 +11,10 @@ model = ChatMistralAI(
 parser = StrOutputParser()
 
 code_template = ChatPromptTemplate.from_messages([
-    ("system", "Give the whole code of the {topic} ")
+    ("system", "Give the whole code of the {topic}. ")
 ])
 explain_template = ChatPromptTemplate.from_messages([
-    ("system","you have to explain the given {code} in  easy language.")
+    ("system","you have to explain the given {code} in easy language.")
 ])
 
 seq1 = code_template | model | parser
