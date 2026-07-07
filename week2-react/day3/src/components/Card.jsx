@@ -10,7 +10,7 @@ const Card = (elem) => {
           alt=""
         />
         <button>
-          Save <Bookmark size={14} />
+          Save <Bookmark size={12} />
         </button>
       </div>
       <div className="center">
