@@ -29,7 +29,7 @@ const Card = (elem) => {
           <h3>{elem.salary}</h3>
           <p>{elem.location} </p>
         </div>
-        <button>Apply</button>
+        <button>Apply.</button>
       </div>
     </div>
   );
