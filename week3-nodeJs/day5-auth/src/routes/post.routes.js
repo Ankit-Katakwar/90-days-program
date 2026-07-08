@@ -11,7 +11,7 @@ routes.post("/posts", async (req,res)=>{
 
     const token = req.cookies.token
     if(!token){
-        return res.status(401).json({
+        return res.status(402).json({
             message:"Unauthorised. "
         })
 
