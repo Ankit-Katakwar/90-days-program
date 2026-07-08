@@ -7,7 +7,7 @@ async function connectDB (req,res){
      console.log("Connected to DB.");
      
 }catch(err){
-    console.log("Error:",err)
+    console.log("Error occured :",err)
 }
    }
 
