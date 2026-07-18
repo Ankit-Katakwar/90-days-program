@@ -16,7 +16,7 @@ const App = () => {
       setinc(inc+9)
     }}>Increase</button>
     <button onClick={function(){
-      setinc(inc-1)
+      setinc(inc-2)
     }}>Decrease</button>
     <button onClick={function(){
       setinc(inc+5)
