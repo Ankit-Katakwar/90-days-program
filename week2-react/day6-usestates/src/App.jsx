@@ -35,7 +35,7 @@ const App = () => {
       </button>
       <h3>
         {list.map((task, i) => {
-          return  <h3 key={i}>{i+1}. {task}</h3>;
+          return  <h3 key={i}>{i+7}. {task}</h3>;
         })}
       </h3>
     </div>
