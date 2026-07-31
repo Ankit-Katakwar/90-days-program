@@ -166,7 +166,7 @@
 
 
 def double(x):
-    double =   x * 2 
+    double =   x * 4 
     return double
    
    
